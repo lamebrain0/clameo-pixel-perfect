@@ -8,11 +8,11 @@ const HomeScreen = () => {
       {/* Header */}
       <div className="flex items-center justify-between p-6 pt-12">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-blue rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg">A</span>
+          <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+            <span className="text-white font-bold text-lg">C</span>
           </div>
           <div>
-            <h1 className="text-white text-xl font-semibold">Akhil</h1>
+            <h1 className="text-white text-xl font-semibold">Clameo</h1>
             <p className="text-white/70 text-sm">Welcome back</p>
           </div>
         </div>

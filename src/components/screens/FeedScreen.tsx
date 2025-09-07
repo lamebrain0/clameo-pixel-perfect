@@ -62,20 +62,27 @@ const FeedScreen = () => {
       <div className="px-6 -mt-3 space-y-4 pb-6">
         {/* Categories */}
         <div className="flex items-center gap-3 overflow-x-auto pb-2">
-          {["All", "Tips", "Updates", "Claims", "Health", "Life"].map((category) => (
-            <Button
-              key={category}
-              variant={category === "All" ? "default" : "outline"}
-              size="sm"
-              className={`whitespace-nowrap rounded-full ${
-                category === "All" 
-                  ? "bg-primary text-white" 
-                  : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
-              }`}
-            >
-              {category}
-            </Button>
-          ))}
+          {["All", "Tips", "Updates", "Claims", "Health", "Life"].map((category) => {
+            const isActive = category === "All"; // You can add state to track active category
+            return (
+              <Button
+                key={category}
+                variant={isActive ? "default" : "outline"}
+                size="sm"
+                className={`whitespace-nowrap rounded-full transition-colors ${
+                  isActive 
+                    ? "bg-primary text-white hover:bg-primary/90" 
+                    : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
+                }`}
+                onClick={() => {
+                  // Category filter logic can be added here
+                  console.log(`Selected category: ${category}`);
+                }}
+              >
+                {category}
+              </Button>
+            );
+          })}
         </div>
 
         {/* Feed Items */}
