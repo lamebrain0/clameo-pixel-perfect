@@ -54,9 +54,9 @@ const ClaimSupportScreen = () => {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">C</span>
+                <span className="text-white font-bold text-sm">A</span>
               </div>
-              <span className="text-white text-lg font-medium">Clameo</span>
+              <span className="text-white text-lg font-medium">Akhil</span>
             </div>
             <div className="w-10 h-10 bg-warning-yellow rounded-full flex items-center justify-center">
               <span className="text-background font-bold">👤</span>
@@ -99,12 +99,12 @@ const ClaimSupportScreen = () => {
               <span className="text-2xl">🤖</span>
             </div>
             <div className="flex-1">
-              <h3 className="text-blue-900 font-semibold text-lg mb-1">Meet Robin</h3>
+              <h3 className="text-blue-900 font-semibold text-lg mb-1">Meet Clameo</h3>
               <p className="text-blue-700 text-sm mb-3">
                 Your AI claims assistant is here to help you through the entire process
               </p>
               <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white">
-                Start Chat with Robin
+                Start Chat with Clameo
               </Button>
             </div>
           </div>

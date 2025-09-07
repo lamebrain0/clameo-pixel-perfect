@@ -2,7 +2,7 @@ import { ArrowRight, HelpCircle, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-const HomeScreen = () => {
+const HomeScreen = ({ onViewPlans }: { onViewPlans: () => void }) => {
   return (
     <div className="bg-gradient-primary min-h-screen">
       {/* Header */}
@@ -12,7 +12,7 @@ const HomeScreen = () => {
             <span className="text-white font-bold text-lg">C</span>
           </div>
           <div>
-            <h1 className="text-white text-xl font-semibold">Clameo</h1>
+            <h1 className="text-white text-xl font-semibold">Akhil</h1>
             <p className="text-white/70 text-sm">Welcome back</p>
           </div>
         </div>
@@ -72,7 +72,10 @@ const HomeScreen = () => {
         </div>
 
         {/* View Plans Button */}
-        <Button className="w-full bg-white text-background hover:bg-white/90 text-lg font-semibold py-6 rounded-xl">
+        <Button 
+          onClick={onViewPlans}
+          className="w-full bg-white text-background hover:bg-white/90 text-lg font-semibold py-6 rounded-xl"
+        >
           View plans
           <ArrowRight className="w-5 h-5 ml-2" />
         </Button>

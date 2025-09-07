@@ -46,9 +46,9 @@ const ContractAnalysisScreen = () => {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">C</span>
+                <span className="text-white font-bold text-sm">A</span>
               </div>
-              <span className="text-white text-lg font-medium">Clameo</span>
+              <span className="text-white text-lg font-medium">Akhil</span>
             </div>
             <div className="w-10 h-10 bg-warning-yellow rounded-full flex items-center justify-center">
               <span className="text-background font-bold">👤</span>
