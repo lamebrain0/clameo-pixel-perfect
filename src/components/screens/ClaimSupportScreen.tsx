@@ -99,7 +99,7 @@ const ClaimSupportScreen = () => {
               <span className="text-2xl">🤖</span>
             </div>
             <div className="flex-1">
-              <h3 className="text-blue-900 font-semibold text-lg mb-1">Meet Clameo</h3>
+              <h3 className="text-blue-900 font-semibold text-lg mb-1">Meet Claimeo</h3>
               <p className="text-blue-700 text-sm mb-3">
                 Your AI claims assistant is here to help you through the entire process
               </p>
