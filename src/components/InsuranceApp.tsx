@@ -1,33 +1,37 @@
 import { useState } from "react";
-import { Home, FileText, Shield, DollarSign } from "lucide-react";
+import { Home, FileText, Shield, DollarSign, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import HomeScreen from "./screens/HomeScreen";
-import PoliciesScreen from "./screens/PoliciesScreen";
-import ClaimsScreen from "./screens/ClaimsScreen";
-import FeedScreen from "./screens/FeedScreen";
+import ContractAnalysisScreen from "./screens/ContractAnalysisScreen";
+import ClaimSupportScreen from "./screens/ClaimSupportScreen";
+import MyPoliciesScreen from "./screens/MyPoliciesScreen";
+import TalkScreen from "./screens/TalkScreen";
 
-type Screen = "home" | "feed" | "policies" | "claims";
+type Screen = "home" | "my-policies" | "talk" | "contract-analysis" | "claim-support";
 
 const InsuranceApp = () => {
   const [activeScreen, setActiveScreen] = useState<Screen>("home");
 
   const navItems = [
     { id: "home" as Screen, label: "Home", icon: Home },
-    { id: "feed" as Screen, label: "Feed", icon: FileText },
-    { id: "policies" as Screen, label: "Policies", icon: Shield },
-    { id: "claims" as Screen, label: "Claims", icon: DollarSign },
+    { id: "my-policies" as Screen, label: "My Policies", icon: FileText },
+    { id: "talk" as Screen, label: "Talk", icon: MessageCircle },
+    { id: "contract-analysis" as Screen, label: "Contract Analysis", icon: Shield },
+    { id: "claim-support" as Screen, label: "Claim Support", icon: DollarSign },
   ];
 
   const renderScreen = () => {
     switch (activeScreen) {
       case "home":
         return <HomeScreen />;
-      case "feed":
-        return <FeedScreen />;
-      case "policies":
-        return <PoliciesScreen />;
-      case "claims":
-        return <ClaimsScreen />;
+      case "my-policies":
+        return <MyPoliciesScreen />;
+      case "talk":
+        return <TalkScreen />;
+      case "contract-analysis":
+        return <ContractAnalysisScreen />;
+      case "claim-support":
+        return <ClaimSupportScreen />;
       default:
         return <HomeScreen />;
     }
@@ -48,14 +52,15 @@ const InsuranceApp = () => {
               key={id}
               onClick={() => setActiveScreen(id)}
               className={cn(
-                "flex flex-col items-center gap-1 transition-colors p-2 rounded-lg min-w-[60px]",
+                "flex flex-col items-center gap-1 transition-colors p-2 rounded-lg min-w-[50px]",
+                id === "talk" && "animate-pulse",
                 activeScreen === id
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
-              <Icon className="w-6 h-6" />
-              <span className="text-xs font-medium">{label}</span>
+              <Icon className={cn("w-5 h-5", id === "talk" && "animate-bounce")} />
+              <span className="text-[10px] font-medium leading-tight">{label}</span>
             </button>
           ))}
         </div>
