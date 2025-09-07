@@ -104,7 +104,7 @@ const ClaimSupportScreen = () => {
                 Your AI claims assistant is here to help you through the entire process
               </p>
               <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white">
-                Start Chat with Clameo
+                Start Chat with Claimeo
               </Button>
             </div>
           </div>
