@@ -76,7 +76,7 @@ const HomeScreen = ({ onViewPlans }: { onViewPlans: () => void }) => {
           onClick={onViewPlans}
           className="w-full bg-white text-background hover:bg-white/90 text-lg font-semibold py-6 rounded-xl"
         >
-          Find With claimeo
+          Find With claimeo 🔎
           <ArrowRight className="w-5 h-5 ml-2" />
         </Button>
       </div>
