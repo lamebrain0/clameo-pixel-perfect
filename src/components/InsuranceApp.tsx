@@ -208,7 +208,7 @@ const QuestionnaireModal = ({ onClose }: { onClose: () => void }) => {
             <button
               key={index}
               onClick={() => handleAnswer(option)}
-              className="w-full p-4 text-left bg-grey-200 hover:bg-primary/10 rounded-xl transition-colors border-2 border-transparent hover:border-primary/20">
+              className="w-full p-4 text-left bg-slate-800 text-white hover:bg-slate-700 rounded-xl transition-colors border-2 border-transparent hover:border-primary/50">
               {option}
             </button>
           ))}
